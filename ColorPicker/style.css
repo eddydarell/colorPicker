@@ -1,0 +1,224 @@
+body {
+    font-family: arial, times new roman;
+    color: #555;
+    padding: 10px 20px;
+}
+
+main {
+    display: grid;
+    place-items: center;
+    height: auto;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    height: 100vh;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
+}
+
+.card > .preview {
+    display: block;
+    height: 50px;
+    width: 100%;
+    padding: 0;
+    margin: 20px 0;
+    border: 1px solid black;
+}
+
+.main-wrapper {
+    display: flex;
+    white-space: nowrap;
+}
+
+.color-picker {
+    border: 1px solid #aaaaaa;
+    width: 245px;
+}
+
+.palette {
+    display: inline-block;
+    border: 1px solid #aaaaaa;
+    width: 199px;
+    height: 199px;
+    left: 10px;
+    top: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.hue-bar {
+    top: 10px;
+    width: 15px;
+    height: 200px;
+    display: inline-block;
+    white-space: normal;
+    margin-left: 20px;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.p {
+    display: block;
+    font-size: 25px;
+    padding: 20px;
+}
+
+.color-details {
+    margin-left: 10px;
+    font-size: 12px;
+    margin-top: 15px;
+    position: relative;
+    margin-right: 5px;
+}
+
+.rgb {
+    display: inline-block;
+    padding: 5px;
+    padding-top: 0px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    position: absolute;
+    top: 3px;
+}
+
+.r {
+    right: 125px;
+}
+
+.g {
+    right: 75px;
+}
+
+.b {
+    right: 25px;
+}
+
+.hue-cursor {
+    display: flex;
+    border: 2px solid black;
+    width: 15px;
+    border-radius: 2px;
+    height: 3px;
+    z-index: 99;
+    position: absolute;
+}
+
+.hue-container {
+    text-align: center;
+    width: 15px;
+    height: 150px;
+    display: inline-block;
+    white-space: normal;
+    margin-left: 10px;
+    position: absolute;
+}
+
+#test {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #aaaaaa;
+    margin: 10px;
+    display: inline_block;
+    background-color: blueviolet;
+    margin-bottom: 50px;
+}
+
+span.color-preview-box {
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+    border: 1px solid #aaaaaa;
+    margin-top: 5px;
+    border-radius: 50%;
+}
+
+.palette-cursor {
+    top: 0;
+    left: 0;
+    display: block;
+    position: absolute;
+    border: 1px solid black;
+    width: 3px;
+    height: 3px;
+    border-radius: 3px;
+    z-index: 10;
+    background-color: white;
+}
+
+.hue-cursor {
+    top: 0;
+    left: 0;
+    display: block;
+    position: absolute;
+    border: 1px solid black;
+    width: 13PX;
+    height: 3px;
+    z-index: 10;
+    background-color: white;
+}
+
+.color-hex {
+    display: block;
+    margin-bottom: 10px;
+    margin-left: 87px;
+    margin-top: -20px;
+    text-align: center;
+    font-size: 12px;
+    /*float: right;*/
+}
+
+.hue-bar-img {
+    height: 200px;
+    max-width: 100%;
+    /*max-height:100%;*/
+}
+
+#petit {
+    margin-left: 500px;
+    margin-top: 50px;
+    top: 50px;
+    background-color: #fff;
+    position: absolute;
+    width: 300px;
+    height: 300px;
+}
+
+.grand {
+    margin-left: 50px;
+    margin-top: 50px;
+    background-color: #ffc6c6;
+    width: 100px;
+    height: 100px;
+}
+
+.code-box {
+    display: inline-block;
+    border: 1px solid #aaaaaa;
+    padding: 3px;
+    width: 20px;
+    max-width: 90px;
+    height: 20px;
+    max-height: 15px;
+    text-align: center;
+}
+
+.hex-code-box {
+    display: inline-block;
+    border: 1px solid #aaaaaa;
+    padding: 3px;
+    width: 55px;
+    max-width: 90px;
+    height: 20px;
+    max-height: 15px;
+    text-align: center;
+}

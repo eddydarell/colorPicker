@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+    <meta http-equiv="coontent-type" content="text/html; charset=utf-8" />
+    <meta charset="UTF-8" />
+    <script src="ColorPicker.func.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Examples</title>
+</head>
+
+<body>
+    <main>
+        <div class="card one">
+            <h1>Example 1</h1>
+            <p>In this example the color picker updates a DIV box on the fly as the color is changed. As well as the color picker in the second example.</p>
+            <div class="preview"></div>
+            <div class="cp-container"></div>
+        </div>
+        <div class="card two">
+            <h1>Example 2</h1>
+            <p>In this example the color picker updates a DIV box on the fly as the color is changed. No other actions are triggered however.</p>
+            <div class="preview"></div>
+            <div class="cp-container"></div>
+        </div>
+        <div class="card three">
+            <h1>Example 3</h1>
+            <p>In this example the color picker updates a DIV box on the fly as the color is changed as well as the body element background color.</p>
+            <div class="preview"></div>
+            <div class="cp-container"></div>
+        </div>
+    </main>
+
+    <script language="javascript">
+        let col = new ColorPicker();
+        let col2 = new ColorPicker();
+        let col3 = new ColorPicker();
+
+        let body = document.querySelector('body');
+        let ex1 = document.querySelector('.one .cp-container');
+        let ex2 = document.querySelector('.two .cp-container');
+        let ex3 = document.querySelector('.three .cp-container');
+        let ex1Prev = document.querySelector('.one .preview');
+        let ex2Prev = document.querySelector('.two .preview');
+        let ex3Prev = document.querySelector('.three .preview');
+
+        col.setColor('FF0000');
+        col2.setColor('00FF00');
+        col3.setColor('0000FF');
+
+        col.setOnChange(function() {
+            ex1Prev.style.backgroundColor = '#' + col.getColor();
+            col2.setColor(col.getColor());
+        });
+
+        col2.setOnChange(_ => {
+            ex2Prev.style.backgroundColor = '#' + col2.getColor();
+        });
+
+        col3.setOnChange(function() {
+            ex3Prev.style.backgroundColor = '#' + col3.getColor();
+            body.style.backgroundColor = '#' + col3.getColor();
+        });
+
+        ex1.appendChild(col.render());
+        ex2.appendChild(col2.render());
+        ex3.appendChild(col3.render());
+    </script>
+</body>
+
+</html>
